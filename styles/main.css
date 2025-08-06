@@ -1,0 +1,11 @@
+main {
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-width: 100vw;
+}
+
+#logo {
+  display: flex;
+  margin-top: 25px;
+  margin-inline: auto;
+}
