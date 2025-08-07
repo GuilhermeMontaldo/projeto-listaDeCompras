@@ -146,4 +146,9 @@ footer {
         color: var(--always-white);
         margin-right: auto;
     }
+
+    & button {
+      background-color: transparent;
+      border: none;
+    }
 }

@@ -37,5 +37,23 @@ submitForm.addEventListener("submit", (event) => {
     // adicionando o produto a area de produtos.
     const spaceProduct = document.getElementById("checkboxSpace");
     spaceProduct.append(boxItem);
+
+    // deletando o produto desejado.
+    deleteButton.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        // removendo o produto.
+        boxItem.remove();
+
+        const footer = document.querySelector("footer")
+        footer.classList.add("show-delete-item")
+
+        const removeFooter = document.querySelector("footer button")
+
+        removeFooter.addEventListener("click", (event) => {
+            event.preventDefault()
+            footer.classList.remove("show-delete-item")
+        })
+    });
   }
 });
