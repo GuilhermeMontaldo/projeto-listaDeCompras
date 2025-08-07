@@ -1,11 +1,149 @@
 main {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   margin-inline: auto;
+  align-items: center;
   max-width: 100vw;
 }
 
 #logo {
   display: flex;
+  box-sizing: border-box;
   margin-top: 25px;
+  margin-bottom: 46px;
   margin-inline: auto;
+}
+
+main .container h1 {
+  font: var(--title);
+}
+
+main .container span {
+  font: var(--label);
+  color: var(--color-brand);
+}
+
+.container {
+  & #addItemForm {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    width: 627px;
+    height: 44px;
+    margin-top: 20px;
+
+    & #addItem {
+      margin-right: 16px;
+      width: 451px;
+      padding-left: 18px;
+      border: 2px solid var(--border-primary);
+      border-radius: 12px;
+      background-color: var(--background-secondary);
+      font: var(--paragraph);
+
+      &::placeholder {
+        color: var(--content-tertiary);
+      }
+
+      &:hover {
+        color: var(--content-tertiary);
+        border: 2px solid var(--border-hover);
+      }
+
+      &:active {
+        /* ajeitar a borda ao ativar */
+        border-color: var(--color-brand);
+        color: var(--content-primary);
+      }
+
+      &:active::placeholder {
+        color: var(--content-primary);
+      }
+    }
+
+    & #addItemSubmit {
+      width: 160px;
+      border-radius: 12px;
+      font: var(--paragraph);
+      color: var(--always-white);
+      background-color: var(--color-brand);
+      border: none;
+
+      &:hover {
+        background-color: var(--color-brand-hover);
+      }
+    }
+  }
+
+  #checkboxSpace {
+    display: flex;
+    flex-direction: column;
+    margin-block: 36px;
+
+    & .checkbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 627px;
+      height: 49px;
+      background-color: var(--background-secondary);
+      border-radius: 12px;
+      margin-bottom: 12px;
+
+      & #checkboxButton {
+        display: flex;
+        margin-inline: 12px;
+        height: 18px;
+        align-self: center;
+      }
+
+      & #nameProduct {
+        font: var(--label);
+        color: var(--content-secondary);
+      }
+
+      & #deleteButton {
+        border: none;
+        background-color: transparent;
+        margin-left: auto;
+        margin-right: 20px;
+
+        & div {
+          width: 16px;
+          height: 16px;
+          background-image: url(../assets/laystall.svg);
+
+          &:active {
+            width: 16px;
+            height: 16px;
+            background-image: url(../assets/laystall-active.svg);
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+    display: none;
+    flex-direction: row;
+    width: 627px;
+    height: 44px;
+    background-color: var(--color-danger);
+    border-radius: 12px;
+    align-items: center;
+
+    & img {
+        margin-inline: 12px;
+        width: 22px;
+    }
+
+    & div {
+        padding: 0;
+        margin-block: 3px 0px;
+        font: var(--label);
+        color: var(--always-white);
+        margin-right: auto;
+    }
 }
