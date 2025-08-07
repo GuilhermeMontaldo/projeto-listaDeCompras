@@ -91,19 +91,19 @@ main .container span {
       border-radius: 12px;
       margin-bottom: 12px;
 
-      & #checkboxButton {
+      & .checkboxButton {
         display: flex;
         margin-inline: 12px;
         height: 18px;
         align-self: center;
       }
 
-      & #nameProduct {
+      & .nameProduct {
         font: var(--label);
         color: var(--content-secondary);
       }
 
-      & #deleteButton {
+      & .deleteButton {
         border: none;
         background-color: transparent;
         margin-left: auto;
